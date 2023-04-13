@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function percentageConv() {
+  let x = document.forms["myForm"]["fname"].value;
+  let thirty= 0.3*x;
+document.write("Thirty Percent: " + thirty);
+document.write("<br>");
+  let seventy= 0.7*x;
+  document.write("Seventy Percent: " + seventy);
+  
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+
+
+<body>
+
+<h2>Percentage Converter</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return percentageConv()" method="post">
+  Score: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
